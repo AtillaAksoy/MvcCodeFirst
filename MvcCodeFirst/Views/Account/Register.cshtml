@@ -1,0 +1,67 @@
+﻿@model RegisterVM
+@{
+    ViewData["Title"] = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="row">
+    <div class="col-md-6 mx-auto">
+        <h1 class="text-center">Register</h1>
+        <hr />
+        <form method="post">
+
+            <div>
+                <label asp-for="Email"></label>
+                <span asp-validation-for="Email"></span>
+                <input type="text" class="form-control" asp-for="Email" />
+            </div>
+
+            <div>
+                <label asp-for="Username"></label>
+                <span asp-validation-for="Username"></span>
+                <input type="text" class="form-control" asp-for="Username" />
+            </div>
+
+            <div>
+                <label asp-for="Password"></label>
+                <span asp-validation-for="Password"></span>
+                <input type="password" class="form-control" asp-for="Password" />
+            </div>
+
+            <div>
+                <label asp-for="ConfirmPassword"></label>
+                <span asp-validation-for="ConfirmPassword"></span>
+                <input type="password" class="form-control" asp-for="ConfirmPassword" />
+            </div>
+
+            <div>
+                <label asp-for="Firstname"></label>
+                <span asp-validation-for="Firstname"></span>
+                <input type="text" class="form-control" asp-for="Firstname"/>
+            </div>
+            <div>
+                <label asp-for="Lastname"></label>
+                <span asp-validation-for="Lastname"></span>
+                <input type="text" class="form-control" asp-for="Lastname" />
+            </div>
+            
+            <div class="mt-2">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Gender" id="exampleRadios1" value="Kadın">
+                    <label class="form-check-label" for="gender">
+                        Female
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Gender" id="exampleRadios2" value="Erkek">
+                    <label class="form-check-label" for="gender">
+                       Male
+                    </label>
+                </div>
+               
+            </div>
+            <button type="submit" class="btn btn-primary">Register</button>
+        </form>
+    </div>
+</div>

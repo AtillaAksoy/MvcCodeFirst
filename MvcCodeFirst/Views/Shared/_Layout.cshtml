@@ -1,0 +1,43 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>_Layout</title>
+    <!--Bootstrap-->
+    <link href="~/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <!--Custom css-->
+    <link href="~/css/site.css" rel="stylesheet" />
+</head>
+<body>
+
+    @if (TempData["Result"] != null)
+    {
+        <div>
+            @TempData["Result"]
+        </div>
+    }
+
+    <div class="container">
+        @RenderBody()
+    </div>
+
+
+
+
+
+
+
+    <!--Jquery-->
+    <script src="~/lib/jquery/jquery.js"></script>
+    <!--Bootstrap Js-->
+    <script src="~/lib/bootstrap/bootstrap.js"></script>
+    <!--Custom Js-->
+    <script src="~/js/site.js"></script>
+</body>
+</html>

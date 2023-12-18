@@ -1,0 +1,11 @@
+﻿@{
+    ViewData["Title"] = "SendEmail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@if (TempData["SendEmail"] != null)
+{
+    <div class="alert alert-warning">
+        @TempData["SendEmail"]
+    </div>
+}

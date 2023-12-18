@@ -1,0 +1,18 @@
+﻿@model List<MvcCodeFirst.Models.Entities.Product>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<td>
+    @foreach(var item in Model)
+    {
+        <tr>
+            @item.Id
+            @item.ProductName
+            @item.Description
+        </tr>
+    }
+    
+</td>
+

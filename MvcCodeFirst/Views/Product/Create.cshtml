@@ -1,0 +1,48 @@
+﻿@model ProductVM
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="row">
+    <div class="col-md-6 mx-auto">
+        <h1 class="text-center">Product Create</h1>
+        <hr />
+        <form method="post">
+
+            <div>
+                <label asp-for="ProductName"></label>
+                <span asp-validation-for="ProductName"></span>
+                <input type="text" class="form-control" asp-for="ProductName" />
+            </div>
+
+
+            <div>
+                <label asp-for="Category"></label>
+                <span asp-validation-for="Category"></span>
+                <input type="password" class="form-control" asp-for="Category" />
+            </div>
+
+            <div>
+                <label asp-for="Description"></label>
+                <span asp-validation-for="Description"></span>
+                <input type="password" class="form-control" asp-for="Description" />
+            </div>
+
+            <div>
+                <label asp-for="UnitPrice"></label>
+                <span asp-validation-for="UnitPrice"></span>
+                <input type="text" class="form-control" asp-for="UnitPrice" />
+            </div>
+            <div>
+                <label asp-for="UnitsInStock"></label>
+                <span asp-validation-for="UnitsInStock"></span>
+                <input type="text" class="form-control" asp-for="UnitsInStock" />
+            </div>
+
+           
+            <button type="submit" class="btn btn-primary">Create</button>
+        </form>
+    </div>
+</div>

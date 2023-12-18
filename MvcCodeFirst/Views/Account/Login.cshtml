@@ -1,0 +1,37 @@
+﻿@model LoginVM
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger">
+            @TempData["Error"]
+        </div>
+    }
+    <div class="col-md-6 mx-auto">
+        <h1 class="text-center">Login</h1>
+        <hr />
+        <form method="post">
+
+            <div>
+                <label asp-for="Email"></label>
+                <span asp-validation-for="Email"></span>
+                <input type="text" class="form-control" asp-for="Email" />
+            </div>
+
+
+
+            <div>
+                <label asp-for="Password"></label>
+                <span asp-validation-for="Password"></span>
+                <input type="password" class="form-control" asp-for="Password" />
+            </div>
+
+
+            <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+    </div>
+</div>
